@@ -59,7 +59,7 @@ const Landing = () => {
 
     axios({
       method: "post",
-      url: `https://email.acmvit.in/rsvp`,
+      url: process.env.REACT_APP_RSVP_URL,
       data: qs.stringify({
         email,
         captcha: window.sessionStorage.getItem("token"),
